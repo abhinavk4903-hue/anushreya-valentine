@@ -1,0 +1,50 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anushreya ❤️</title>
+    <style>
+        body {
+            background: radial-gradient(circle at top, #ff9a9e, #fad0c4);
+            font-family: 'Comic Sans MS', 'Segoe UI', cursive;
+            text-align: center;
+            color: #fff;
+            padding: 60px 20px;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #fff; }
+            to { text-shadow: 0 0 25px #ff2f92; }
+        }
+
+        .card {
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            padding: 30px;
+            max-width: 700px;
+            margin: auto;
+            backdrop-filter: blur(10px);
+        }
+
+        p {
+            font-size: 1.4em;
+            line-height: 1.6;
+        }
+
+        button {
+            margin: 15px;
+            padding: 15px 35px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            background: #fff;
+            color: #ff2f92;
+            transition

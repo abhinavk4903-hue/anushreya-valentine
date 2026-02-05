@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anushreya ❤️</title>
+    <style>
+        body {
+            background: radial-gradient(circle at top, #ff9a9e, #fad0c4);
+            font-family: 'Comic Sans MS', 'Segoe UI', cursive;
+            text-align: center;
+            color: #fff;
+            padding: 60px 20px;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #fff; }
+            to { text-shadow: 0 0 25px #ff2f92; }
+        }
+
+        .card {
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            padding: 30px;
+            max-width: 700px;
+            margin: auto;
+            backdrop-filter: blur(10px);
+        }
+
+        p {
+            font-size: 1.4em;
+            line-height: 1.6;
+        }
+
+        button {
+            margin: 15px;
+            padding: 15px 35px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            background: #fff;
+            color: #ff2f92;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background: #ffe6f0;
+        }
+
+        #finalMessage {
+            margin-top: 25px;
+            font-size: 1.6em;
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            font-size: 24px;
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes float {
+            from { transform: translateY(0); opacity: 1; }
+            to { transform: translateY(-800px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Anushreya 💖</h1>
+
+    <div class="card">
+        <p>
+            Filmon me hero entry slow motion me hoti hai…  
+            par tum meri life me aayi  
+            aur <strong>scene hi change kar diya</strong> 😌🎬
+        </p>
+
+        <p>
+            Tumhari smile meri favourite movie hai,  
+            tumhari baatein repeat mode,  
+            aur tum… meri best decision ❤️
+        </p>
+
+        <p><strong>Will you be my Valentine? 💕</strong></p>
+
+        <button onclick="yesClicked()">YES 💖</button>
+        <button id="noBtn" onmouseover="moveNo()">NO 🙈</button>
+
+        <div id="finalMessage"></div>
+    </div>
+
+    <script>
+        function yesClicked() {
+            document.getElementById("finalMessage").innerHTML =
+            "🥰 Yayyy!! Anushreya, ab officially meri Valentine ho 💍❤️";
+        }
+
+        function moveNo() {
+            const noBtn = document.getElementById("noBtn");
+            const x = Math.random() * (window.innerWidth - 120);
+            const y = Math.random() * (window.innerHeight - 120);
+
+            noBtn.style.position = "fixed";
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        }
+
+        // Floating hearts
+        setInterval(() => {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 6000);
+        }, 400);
+    </script>
+
+</body>
+  </html>
